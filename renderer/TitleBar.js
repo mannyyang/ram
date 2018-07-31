@@ -25,7 +25,7 @@ const getTitle = ({
       return 'Create React App'
     case modes.index:
     default:
-      return 'Projects'
+      return 'Pages'
   }
 }
 

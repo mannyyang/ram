@@ -16,7 +16,7 @@ module.exports = () => (
       textAlign: 'center',
       fontSize: 3,
       mb: 3
-    }, 'No Projects Found'),
+    }, 'No Projects Found dfda'),
     h(Text, {
       textAlign: 'center',
     }, 'Create a new React app or open and existing project')

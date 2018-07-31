@@ -47,15 +47,15 @@ class Preview extends React.Component {
     this.root.removeEventListener('did-finish-load', this.onLoad)
   }
 
-  componentDidUpdate () {
-    if (!this.root || !this.root.setZoomFactor) return
-    const { zoom } = this.props
-    try {
-      this.root.setZoomFactor(zoom)
-    } catch (err) {
-      log.error(err)
-    }
-  }
+  // componentDidUpdate () {
+  //   if (!this.root || !this.root.setZoomFactor) return
+  //   const { zoom } = this.props
+  //   try {
+  //     this.root.setZoomFactor(zoom)
+  //   } catch (err) {
+  //     log.error(err)
+  //   }
+  // }
 
   render () {
     const {
@@ -63,6 +63,7 @@ class Preview extends React.Component {
       width,
       height,
       id,
+      name
     } = this.props
 
     return (
@@ -70,7 +71,7 @@ class Preview extends React.Component {
         width,
         height,
         ref: this.ref,
-        src: `http://localhost:${port}`,
+        src: `http://localhost:${port}/${name}`,
         id,
         style: {
           width,

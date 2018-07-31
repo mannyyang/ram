@@ -6,6 +6,7 @@ const keys = [
   'dirname',
   'projects',
   'recents',
+  'pages'
 ]
 
 class StoreEffect extends React.Component {

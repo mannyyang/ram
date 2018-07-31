@@ -22,6 +22,7 @@ const store = new Store({
     dirname: app.getPath('home'),
     projects: [],
     recents: [],
+    pages: []
   }
 })
 

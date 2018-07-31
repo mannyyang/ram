@@ -28,42 +28,6 @@ const appTypes = {
       port: 3000,
       run: 'run dev'
     }
-  },
-  gatsby: {
-    name: 'Gatsby App',
-    install: 'gatsby-cli new',
-    defaults: {
-      type: 'gatsby-cli',
-      port: 8000,
-      run: 'run develop'
-    }
-  },
-  razzle: {
-    name: 'Razzle App',
-    install: 'create-razzle-app',
-    defaults: {
-      type: 'create-razzle-app',
-      port: 3000,
-      run: 'run start'
-    }
-  },
-  nuxt: {
-    name: 'Vue App',
-    install: 'vue create -d',
-    defaults: {
-      type: 'create-vue-app',
-      port: 8080,
-      run: 'run serve'
-    }
-  },
-  preact: {
-    name: 'Preact App',
-    install: 'preact-cli create default',
-    defaults: {
-      type: 'preact-cli',
-      port: 8080,
-      run: 'run start'
-    }
   }
 }
 
@@ -72,7 +36,124 @@ appTypes.options = Object.keys(appTypes).map(key => ({
   name: appTypes[key].name
 }))
 
+
+const COLORS = {
+  hotPink: {
+    '500': '#F50057',
+    '700': '#C51162',
+  },
+  pink: {
+    '100': '#FF80AB',
+    '300': '#ff416c',
+    '500': '#f40041',
+    '700': '#cc004a',
+  },
+  red: {
+    '500': '#ff4b2b',
+    '700': '#c41d00',
+    '900': '#5b0400',
+  },
+  orange: {
+    '500': '#FF9100',
+    '700': '#FF6D00',
+  },
+  yellow: {
+    '500': '#FFC400',
+    '700': '#FFAB00',
+  },
+  lime: {
+    '500': '#C6FF00',
+    '700': '#AEEA00',
+  },
+  lightGreen: {
+    '400': '#a0fc20',
+    '500': '#69db0d',
+    '700': '#64DD17',
+  },
+  green: {
+    '500': '#00E676',
+    '700': '#00C853',
+    '900': '#007540',
+  },
+  teal: {
+    '500': '#1ce9d1',
+    '700': '#00bfb5',
+  },
+  blue: {
+    '500': '#3f6cff',
+    '700': '#304FFE',
+    '800': '#143a80',
+    '900': '#151942',
+  },
+  violet: {
+    '500': '#D500F9',
+    '700': '#AA00FF',
+  },
+  purple: {
+    '500': '#651fff',
+    '700': '#4919b7',
+  },
+  gray: {
+    '50': '#f8f8f8',
+    '100': '#f2f2f2',
+    '200': '#eaeaea',
+    '300': '#cccccc',
+    '400': '#aaaaaa',
+    '500': '#888888',
+    '600': '#666666',
+    '700': '#444444',
+    '800': '#2A2A2A',
+    '900': '#111111',
+  },
+  transparentWhite: {
+    '50': 'rgba(255, 255, 255, 0.97)',
+    '100': 'rgba(255, 255, 255, 0.95)',
+    '200': 'rgba(255, 255, 255, 0.92)',
+    '300': 'rgba(255, 255, 255, 0.8)',
+    '400': 'rgba(255, 255, 255, 0.66)',
+    '500': 'rgba(255, 255, 255, 0.53)',
+    '600': 'rgba(255, 255, 255, 0.4)',
+    '700': 'rgba(255, 255, 255, 0.27)',
+    '800': 'rgba(255, 255, 255, 0.17)',
+    '900': 'rgba(255, 255, 255, 0.07)',
+  },
+  transparentBlack: {
+    '50': 'rgba(0, 0, 0, 0.97)',
+    '100': 'rgba(0, 0, 0, 0.95)',
+    '200': 'rgba(0, 0, 0, 0.92)',
+    '300': 'rgba(0, 0, 0, 0.8)',
+    '400': 'rgba(0, 0, 0, 0.66)',
+    '500': 'rgba(0, 0, 0, 0.53)',
+    '600': 'rgba(0, 0, 0, 0.4)',
+    '700': 'rgba(0, 0, 0, 0.27)',
+    '800': 'rgba(0, 0, 0, 0.17)',
+    '900': 'rgba(0, 0, 0, 0.07)',
+  },
+  white: '#FFF',
+  black: '#000',
+};
+
+// export const BREAKPOINT_SIZES = {
+//   sm: 900,
+//   md: 1440,
+// };
+
+// export const BREAKPOINTS = {
+//   sm: `(max-width: ${BREAKPOINT_SIZES.sm}px)`,
+//   md: `(max-width: ${BREAKPOINT_SIZES.md}px)`,
+//   mdMin: `(min-width: ${BREAKPOINT_SIZES.sm + 1}px)`,
+//   lgMin: `(min-width: ${BREAKPOINT_SIZES.md + 1}px)`,
+// };
+
+// export const Z_INDICES = {
+//   sidebar: 100,
+//   modal: 1000,
+//   titlebar: 10000,
+// };
+
+
 module.exports = {
   modes,
-  appTypes
+  appTypes,
+  COLORS
 }
